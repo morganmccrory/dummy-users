@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Welcome to a Website!</h1>
+  <h3>Please create an account:</h3>
+  <% if @errors %>
+    <%= @errors %>
+  <% end %>
+  <form action="/signup" method="POST">
+    <%= erb :"users/_create_form", locals: { user: @user } %>
+  </form>
+  <a href="/">Click here if you already have an account.</a>
+</div>
+
